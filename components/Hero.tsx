@@ -4,11 +4,11 @@ import { ArrowRight, Handshake } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const heroImages = [
-  "/Images/WhatsApp Image 2026-02-28 at 2.32.33 PM (1).jpeg",
-  "/Images/WhatsApp Image 2026-02-28 at 2.32.33 PM.jpeg",
-  "/Images/WhatsApp Image 2026-02-28 at 2.32.34 PM (1).jpeg",
-  "/Images/WhatsApp Image 2026-02-28 at 2.32.34 PM (2).jpeg",
-  "/Images/WhatsApp Image 2026-02-28 at 2.32.34 PM (3).jpeg"
+  "Images/1.jpg",
+  "Images/2.jpg",
+  "Images/3.jpg",
+  "Images/4.jpg",
+  "Images/5.jpg"
 ];
 
 const Hero: React.FC = () => {
