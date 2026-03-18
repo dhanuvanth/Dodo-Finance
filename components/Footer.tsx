@@ -60,15 +60,15 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-serif font-bold mb-6 text-white">Contact</h3>
             <ul className="space-y-4 text-slate-300">
               <li className="flex items-center gap-3">
-                <a href="mailto:hello@dodofinancials.com" className="hover:text-white transition-colors">hello@dodofinancials.com</a>
+                <a href="mailto:Business@dodofinancials.com" className="hover:text-white transition-colors">Business@dodofinancials.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-primary-400" />
-                <a href="tel:+919876543210" className="hover:text-white transition-colors">+91 98765 43210</a>
+                <a href="tel:+919994475000" className="hover:text-white transition-colors">+91 9994475000</a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-primary-400 mt-1 shrink-0" />
-                <span>123 Business Park, Chennai, India</span>
+                <span>Level 15, 123 Pitt Street, Sydney NSW 2000, Australia</span>
               </li>
             </ul>
             

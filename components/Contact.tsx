@@ -43,9 +43,9 @@ const Contact: React.FC = () => {
             </div>
             <div>
               <h3 className="text-lg font-bold text-slate-800 mb-1">Email Us</h3>
-              <p className="text-[#3b82f6] font-semibold text-lg">
-                info@dodoaccounts.com.au <span className="text-slate-400 mx-1">•</span> support@dodoaccounts.com.au
-              </p>
+              <a href="mailto:Business@dodofinancials.com" className="text-[#3b82f6] font-semibold text-lg hover:underline">
+                Business@dodofinancials.com
+              </a>
             </div>
           </motion.div>
 
@@ -62,9 +62,10 @@ const Contact: React.FC = () => {
             </div>
             <div>
               <h3 className="text-lg font-bold text-slate-800 mb-1">Call Us</h3>
-              <p className="text-[#db2777] font-semibold text-lg">
-                +61 2 8216 1234 <span className="text-slate-400 mx-1">•</span> <span className="text-slate-500 font-medium">Mon-Fri: 9:00 AM - 5:30 PM</span>
-              </p>
+              <a href="tel:+919994475000" className="text-[#db2777] font-semibold text-lg hover:underline">
+                +91 9994475000
+              </a>
+              <p className="text-slate-500 font-medium text-sm mt-1">Mon-Fri: 9:00 AM - 5:30 PM</p>
             </div>
           </motion.div>
 
