@@ -53,7 +53,7 @@ const TeamSoftware: React.FC = () => {
               <div className="p-3 bg-primary-600 rounded-lg">
                 <Users size={32} className="text-white" />
               </div>
-              <h2 className="text-3xl font-bold">Our Team</h2>
+              <h2 className="text-3xl font-serif font-bold">Our Team</h2>
             </div>
             <div className="text-lg text-slate-300 leading-relaxed mb-8 space-y-4">
               <p>
@@ -105,7 +105,7 @@ const TeamSoftware: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold mb-4">Team Profiles</h3>
+            <h3 className="text-2xl font-serif font-bold mb-4">Team Profiles</h3>
             <p className="text-slate-400 max-w-2xl mx-auto">Meet the experts dedicated to your business success.</p>
           </motion.div>
           
@@ -122,7 +122,7 @@ const TeamSoftware: React.FC = () => {
                 <div className={`w-14 h-14 ${member.color} rounded-full flex items-center justify-center mx-auto mb-4 shadow-inner`}>
                   <User size={28} />
                 </div>
-                <h4 className="text-base font-bold text-slate-900 mb-1 leading-tight">{member.name}</h4>
+                <h4 className="text-base font-serif font-bold text-slate-900 mb-1 leading-tight">{member.name}</h4>
                 <p className="text-[10px] font-medium text-slate-500 mb-2 uppercase tracking-wider">{member.qualifications}</p>
                 <p className={`text-[11px] font-bold uppercase tracking-wide ${member.color.split(' ')[1].replace('600', '500')}`}>
                   {member.role}

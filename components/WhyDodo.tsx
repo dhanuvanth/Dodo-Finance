@@ -59,7 +59,7 @@ const WhyDodo: React.FC = () => {
           className="mb-20"
         >
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">
+            <h2 className="text-3xl font-serif font-bold text-slate-900 sm:text-4xl">
               Why Choose Dodo Financials
             </h2>
           </div>
@@ -93,7 +93,7 @@ const WhyDodo: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
           >
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">
+            <h3 className="text-2xl font-serif font-bold text-slate-900 mb-4">
               Smarter & Cost-Efficient Accounting Support
             </h3>
             <p className="max-w-3xl mx-auto text-lg text-slate-600">
@@ -122,7 +122,7 @@ const WhyDodo: React.FC = () => {
                 )}
                 
                 <div className="p-8">
-                  <h4 className={`text-xl font-bold mb-4 ${card.highlight ? 'text-primary-700' : 'text-slate-800'}`}>
+                  <h4 className={`text-xl font-serif font-bold mb-4 ${card.highlight ? 'text-primary-700' : 'text-slate-800'}`}>
                     {card.title}
                   </h4>
                   <div className="mb-6 pb-6 border-b border-slate-200">

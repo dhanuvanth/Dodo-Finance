@@ -1,46 +1,116 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { Phone, MapPin, Linkedin, Facebook, Twitter } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <footer className="bg-[#0a192f] text-white pt-16 pb-8 border-t border-white/10 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          className="flex flex-col md:flex-row justify-between items-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          
-          <div className="flex items-center gap-2 mb-4 md:mb-0">
-            <img 
-              src="https://i.ibb.co/spmxnJBZ/image.png" 
-              alt="Dodo Financials Logo" 
-              className="h-10 w-auto rounded-xl"
-              referrerPolicy="no-referrer"
-            />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+          {/* Logo Section */}
+          <div className="lg:col-span-1 flex flex-col items-start">
+            <a 
+              href="https://vinkand.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-[#1e293b] p-3 rounded-2xl mb-4 shadow-lg hover:bg-[#2d3a4f] transition-colors"
+            >
+              <img 
+                src="https://i.ibb.co/spmxnJBZ/image.png" 
+                alt="Dodo Financials Logo" 
+                className="h-8 w-auto"
+                referrerPolicy="no-referrer"
+              />
+            </a>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-8 text-sm">
-            <a href="#about" onClick={(e) => handleScrollToSection(e, '#about')} className="hover:text-white transition-colors">About</a>
-            <a href="#services" onClick={(e) => handleScrollToSection(e, '#services')} className="hover:text-white transition-colors">Services</a>
-            <a href="#why-dodo" onClick={(e) => handleScrollToSection(e, '#why-dodo')} className="hover:text-white transition-colors">Why Us</a>
-            <a href="#contact" onClick={(e) => handleScrollToSection(e, '#contact')} className="hover:text-white transition-colors">Contact</a>
+          {/* Services Column */}
+          <div>
+            <h3 className="text-lg font-serif font-bold mb-6 text-white">Services</h3>
+            <ul className="space-y-4 text-slate-300">
+              <li><a href="#services" className="hover:text-white transition-colors">Australia</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors">USA</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors">UK</a></li>
+            </ul>
           </div>
 
-          <div className="mt-8 md:mt-0 text-sm">
-            &copy; {new Date().getFullYear()} Dodo Financials. All rights reserved.
+          {/* Company Column */}
+          <div>
+            <h3 className="text-lg font-serif font-bold mb-6 text-white">Company</h3>
+            <ul className="space-y-4 text-slate-300">
+              <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#team" className="hover:text-white transition-colors">Our Team</a></li>
+              <li><a href="#contact" className="hover:text-white transition-colors">Careers</a></li>
+            </ul>
           </div>
-        </motion.div>
+
+          {/* Resources Column */}
+          <div>
+            <h3 className="text-lg font-serif font-bold mb-6 text-white">Resources</h3>
+            <ul className="space-y-4 text-slate-300">
+              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">FAQs</a></li>
+              <li><a href="#contact" className="hover:text-white transition-colors">Contact Us</a></li>
+            </ul>
+          </div>
+
+          {/* Contact Column */}
+          <div>
+            <h3 className="text-lg font-serif font-bold mb-6 text-white">Contact</h3>
+            <ul className="space-y-4 text-slate-300">
+              <li className="flex items-center gap-3">
+                <a href="mailto:hello@dodofinancials.com" className="hover:text-white transition-colors">hello@dodofinancials.com</a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone size={18} className="text-primary-400" />
+                <a href="tel:+919876543210" className="hover:text-white transition-colors">+91 98765 43210</a>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin size={18} className="text-primary-400 mt-1 shrink-0" />
+                <span>123 Business Park, Chennai, India</span>
+              </li>
+            </ul>
+            
+            <div className="flex gap-3 mt-6">
+              <a href="#" className="w-8 h-8 bg-[#0077b5] rounded flex items-center justify-center hover:opacity-80 transition-opacity">
+                <Linkedin size={18} stroke="white" strokeWidth={2} />
+              </a>
+              <a href="#" className="w-8 h-8 bg-[#1877f2] rounded flex items-center justify-center hover:opacity-80 transition-opacity">
+                <Facebook size={18} stroke="white" strokeWidth={2} />
+              </a>
+              <a href="#" className="w-8 h-8 bg-[#00acee] rounded flex items-center justify-center hover:opacity-80 transition-opacity">
+                <Twitter size={18} stroke="white" strokeWidth={2} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Powered By Section */}
+        <div className="flex justify-center items-center py-8 border-t border-white/5">
+          <a 
+            href="https://vinkand.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-slate-400 text-lg hover:text-white transition-colors group"
+          >
+            Made with ❤️ <span className="text-primary-500 font-bold group-hover:text-primary-400 transition-colors">Vinkand</span> <span className="text-white">Technologies</span>
+          </a>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-white/5 text-center">
+          <p className="text-slate-400 text-sm mb-4">
+            &copy; {currentYear} Dodo Financials. All rights reserved.
+          </p>
+          <div className="flex justify-center gap-4 text-slate-400 text-sm">
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <span>|</span>
+            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <span>|</span>
+            <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
+          </div>
+        </div>
       </div>
     </footer>
   );

@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
              </span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 leading-tight drop-shadow-lg">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-white mb-6 leading-tight drop-shadow-lg">
               Professional International <br />
               <span className="text-primary-100">Business Support</span>
           </h1>

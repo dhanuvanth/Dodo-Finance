@@ -17,7 +17,7 @@ const About: React.FC = () => {
           >
             <div className="mb-10">
               <h2 className="text-base text-primary-600 font-semibold tracking-wide uppercase mb-2">Who We Are</h2>
-              <p className="text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
+              <p className="text-4xl font-serif font-bold tracking-tight text-slate-900 leading-tight">
                 About Dodo Financials
               </p>
               <div className="h-1 w-20 bg-primary-500 mt-4 rounded-full"></div>

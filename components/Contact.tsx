@@ -1,94 +1,92 @@
 import React from 'react';
-import { Mail, Clock, Phone } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const Contact: React.FC = () => {
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden" id="contact">
-        {/* Background Pattern */}
-        <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-primary-100 rounded-full opacity-50 blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-blue-100 rounded-full opacity-50 blur-3xl"></div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="py-24 bg-white relative overflow-hidden" id="contact">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-base text-primary-600 font-semibold tracking-wide uppercase mb-2">Contact Us</h2>
-          <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl mb-4">
-            Get in Touch
+          <h2 className="text-5xl md:text-6xl font-serif font-bold text-[#1e293b] mb-4">
+            Get In Touch
           </h2>
-          <p className="mt-4 text-xl text-slate-600 max-w-3xl mx-auto">
-            Ready to build a reliable offshore support model for your business? Get in touch with Dodo Financials to discuss how our offshore accounting and back-office services can support your firm’s operations and growth.
+          
+          {/* Decorative Gradient Line */}
+          <div className="w-12 h-1.5 bg-gradient-to-r from-purple-400 to-pink-500 mx-auto rounded-full mb-6 opacity-80 shadow-sm"></div>
+          
+          <p className="text-xl text-slate-500 font-medium mb-10">
+            We're here to help your business thrive
           </p>
+
+          <button className="bg-[#3b82f6] text-white px-10 py-4 rounded-xl font-bold text-lg shadow-[0_10px_25px_-5px_rgba(59,130,246,0.4)] hover:bg-blue-600 transition-all hover:scale-105 mb-16">
+            Send Enquiry
+          </button>
         </motion.div>
 
-        <motion.div 
-          className="max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Contact Info Card */}
-          <div className="bg-white rounded-2xl shadow-xl border border-slate-100 p-8 md:p-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-6">Contact Information</h3>
-                <p className="text-slate-600 mb-10 leading-relaxed">
-                  Reach out to us via email to partner with Dodo Financials.
-                </p>
-
-                <div className="space-y-8">
-                  <div className="flex items-start gap-4 group">
-                    <div className="flex-shrink-0 w-12 h-12 bg-primary-50 group-hover:bg-primary-100 transition-colors rounded-full flex items-center justify-center text-primary-600">
-                      <Mail size={24} />
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-slate-900">Email Us</h4>
-                      <a href="mailto:info@dodofinancials.com" className="text-slate-600 hover:text-primary-600 transition-colors">
-                        info@dodofinancials.com
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4 group">
-                    <div className="flex-shrink-0 w-12 h-12 bg-primary-50 group-hover:bg-primary-100 transition-colors rounded-full flex items-center justify-center text-primary-600">
-                      <Clock size={24} />
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-slate-900">Business Hours</h4>
-                      <p className="text-slate-600">Monday - Friday</p>
-                      <p className="text-slate-600">9:00 AM - 5:00 PM</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4 group">
-                    <div className="flex-shrink-0 w-12 h-12 bg-primary-50 group-hover:bg-primary-100 transition-colors rounded-full flex items-center justify-center text-primary-600">
-                      <Phone size={24} />
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-semibold text-slate-900">Call Us</h4>
-                      <p className="text-slate-600">+1 (555) 123-4567</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="hidden md:block">
-                <img 
-                  src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&q=80" 
-                  alt="Contact Support" 
-                  className="w-full h-full object-cover rounded-2xl opacity-90 shadow-inner"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+        <div className="space-y-6">
+          {/* Email Card */}
+          <motion.div 
+            className="bg-white rounded-2xl p-6 flex items-center gap-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-slate-50 hover:shadow-md transition-shadow"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="w-14 h-14 bg-[#d1fae5] rounded-full flex items-center justify-center shrink-0">
+              <Mail className="text-[#10b981]" size={28} />
             </div>
-          </div>
-        </motion.div>
+            <div>
+              <h3 className="text-lg font-bold text-slate-800 mb-1">Email Us</h3>
+              <p className="text-[#3b82f6] font-semibold text-lg">
+                info@dodoaccounts.com.au <span className="text-slate-400 mx-1">•</span> support@dodoaccounts.com.au
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Call Card */}
+          <motion.div 
+            className="bg-white rounded-2xl p-6 flex items-center gap-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-slate-50 hover:shadow-md transition-shadow"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <div className="w-14 h-14 bg-[#fce7f3] rounded-full flex items-center justify-center shrink-0">
+              <Phone className="text-[#db2777]" size={28} />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-slate-800 mb-1">Call Us</h3>
+              <p className="text-[#db2777] font-semibold text-lg">
+                +61 2 8216 1234 <span className="text-slate-400 mx-1">•</span> <span className="text-slate-500 font-medium">Mon-Fri: 9:00 AM - 5:30 PM</span>
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Address Card */}
+          <motion.div 
+            className="bg-white rounded-2xl p-6 flex items-center gap-6 shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-slate-50 hover:shadow-md transition-shadow"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <div className="w-14 h-14 bg-[#dbeafe] rounded-full flex items-center justify-center shrink-0">
+              <MapPin className="text-[#2563eb]" size={28} />
+            </div>
+            <div>
+              <h3 className="text-lg font-bold text-slate-800 mb-1">Office Address</h3>
+              <p className="text-slate-500 font-medium text-lg">
+                Level 15, 123 Pitt Street, Sydney NSW 2000, Australia
+              </p>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
