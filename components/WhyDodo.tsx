@@ -1,6 +1,7 @@
 import React from 'react';
-import { Check, X } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { ComparisonCard } from '../types';
+import { motion } from 'motion/react';
 
 const features = [
   "Experienced international accounting professionals",
@@ -50,7 +51,13 @@ const WhyDodo: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Why Choose Us List */}
-        <div className="mb-20">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-20"
+        >
           <div className="text-center mb-12">
             <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">
               Why Choose Dodo Financials
@@ -59,32 +66,49 @@ const WhyDodo: React.FC = () => {
           <div className="bg-primary-50 rounded-2xl p-8 md:p-12">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature, idx) => (
-                <div key={idx} className="flex items-start gap-3">
+                <motion.div 
+                  key={idx} 
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: idx * 0.1 }}
+                  className="flex items-start gap-3"
+                >
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center">
                     <Check size={14} strokeWidth={3} />
                   </div>
                   <span className="text-lg text-slate-700 font-medium">{feature}</span>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Smarter Accounting Support Comparison */}
         <div className="relative">
-          <div className="text-center mb-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-12"
+          >
             <h3 className="text-2xl font-bold text-slate-900 mb-4">
               Smarter & Cost-Efficient Accounting Support
             </h3>
             <p className="max-w-3xl mx-auto text-lg text-slate-600">
               Dodo Financials follows a smarter accounting support model that helps businesses reduce operational costs while maintaining professional standards and compliance.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
             {cards.map((card, index) => (
-              <div 
+              <motion.div 
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
                 className={`relative rounded-2xl transition-all duration-300 ${
                   card.highlight 
                     ? 'bg-white shadow-2xl border-2 border-primary-500 scale-105 z-10' 
@@ -126,7 +150,7 @@ const WhyDodo: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

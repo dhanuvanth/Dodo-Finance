@@ -1,5 +1,6 @@
 import React from 'react';
 import { Target, ShieldCheck, Globe2 } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const About: React.FC = () => {
   return (
@@ -8,7 +9,12 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* Text Content */}
-          <div>
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
             <div className="mb-10">
               <h2 className="text-base text-primary-600 font-semibold tracking-wide uppercase mb-2">Who We Are</h2>
               <p className="text-4xl font-extrabold tracking-tight text-slate-900 leading-tight">
@@ -47,10 +53,16 @@ const About: React.FC = () => {
                 <p className="text-slate-600 text-sm">Manage workload peaks and scale sustainably.</p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Image Content */}
-          <div className="relative">
+          <motion.div 
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative"
+          >
             <div className="absolute -top-4 -left-4 w-2/3 h-2/3 bg-primary-100 rounded-2xl -z-10"></div>
             <div className="absolute -bottom-4 -right-4 w-2/3 h-2/3 bg-slate-100 rounded-2xl -z-10"></div>
             
@@ -76,7 +88,7 @@ const About: React.FC = () => {
                 </div>
                 <div className="text-slate-900 font-bold leading-tight">Accepting New Clients</div>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Button from './Button';
 import { ArrowRight, Handshake } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const heroImages = [
-  "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80", // Finance/Accounting
-  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80", // Data/Charts
-  "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80", // Meeting
-  "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80" // Office
+  "Images/WhatsApp Image 2026-02-28 at 2.32.33 PM (1).jpeg",
+  "Images/WhatsApp Image 2026-02-28 at 2.32.33 PM.jpeg",
+  "Images/WhatsApp Image 2026-02-28 at 2.32.34 PM (1).jpeg",
+  "Images/WhatsApp Image 2026-02-28 at 2.32.34 PM (2).jpeg",
+  "Images/WhatsApp Image 2026-02-28 at 2.32.34 PM (3).jpeg"
 ];
 
 const Hero: React.FC = () => {
@@ -42,7 +44,12 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-primary-900/50 z-0"></div>
 
       {/* Content Section - Centered */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center"
+      >
           <div className="mb-6 inline-block">
              <span className="py-2 px-4 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white font-medium text-sm md:text-base tracking-wide shadow-sm">
                 You focus on your business. We take care of the back office.
@@ -73,7 +80,7 @@ const Hero: React.FC = () => {
           <p className="mt-8 text-white/80 text-sm font-medium tracking-wide">
             Creating win-win partnerships through reliable offshore support.
           </p>
-      </div>
+      </motion.div>
       
       {/* Carousel Indicators */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">

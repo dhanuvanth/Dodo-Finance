@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, BarChart3 } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { NavItem } from '../types';
 
 const navItems: NavItem[] = [
@@ -43,17 +43,12 @@ const Navbar: React.FC = () => {
               className="flex items-center gap-3 group"
               onClick={(e) => handleScrollToSection(e, '#home')}
             >
-              <div className={`p-2.5 rounded-xl ${scrolled ? 'bg-primary-700 text-white shadow-md' : 'bg-white text-primary-700 shadow-lg'}`}>
-                <BarChart3 size={26} strokeWidth={2.5} />
-              </div>
-              <div className="flex flex-col">
-                <span className={`font-bold text-xl leading-none tracking-tight ${scrolled ? 'text-slate-900' : 'text-white'}`}>
-                  Dodo
-                </span>
-                <span className={`text-xs font-medium tracking-widest uppercase ${scrolled ? 'text-primary-600' : 'text-white'}`}>
-                  Financials
-                </span>
-              </div>
+              <img 
+                src="https://i.ibb.co/spmxnJBZ/image.png" 
+                alt="Dodo Financials Logo" 
+                className="h-12 w-auto transition-all duration-300 rounded-2xl"
+                referrerPolicy="no-referrer"
+              />
             </a>
           </div>
 
