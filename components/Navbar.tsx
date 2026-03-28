@@ -43,11 +43,10 @@ const Navbar: React.FC = () => {
               className="flex items-center gap-3 group"
               onClick={(e) => handleScrollToSection(e, '#home')}
             >
-              <img 
-                src="https://i.ibb.co/spmxnJBZ/image.png" 
-                alt="Dodo Financials Logo" 
+              <img
+                src="/Images/trustedBy/W Blue.png"
+                alt="Dodo Financials Logo"
                 className="h-12 w-auto transition-all duration-300 rounded-2xl"
-                referrerPolicy="no-referrer"
               />
             </a>
           </div>

@@ -1,57 +1,47 @@
 import React from 'react';
-import { Check } from 'lucide-react';
-import { ComparisonCard } from '../types';
+import { ShieldCheck, Users, Lock, ClipboardCheck, Landmark, DollarSign, ArrowUpDown, Zap, ClipboardList, Settings } from 'lucide-react';
 import { motion } from 'motion/react';
 
-const features = [
-  "Experienced international accounting professionals",
-  "Strong focus on accuracy and compliance",
-  "Secure handling of financial data",
-  "Flexible and scalable support",
-  "Familiar with Australian, UK, and USA accounting practices"
-];
-
-const cards: ComparisonCard[] = [
+const whyCards = [
   {
-    title: "Traditional In-House Accountant",
-    features: [
-      "Full-time salary & benefits",
-      "Office space & overheads",
-      "Limited scalability",
-      "Fixed monthly cost"
-    ],
-    priceModel: "High Fixed Cost"
+    icon: <Landmark size={22} className="text-white" />,
+    title: "Dedicated to U.S. CPAs",
+    description: "Our deep knowledge of American accounting standards, tax laws, and audit requirements ensures seamless integration.",
   },
   {
-    title: "Local Accounting Firm",
-    features: [
-      "Higher hourly rates",
-      "Long-term contracts",
-      "Limited flexibility",
-      "Cost increases with workload"
-    ],
-    priceModel: "High Variable Cost"
+    icon: <DollarSign size={22} className="text-white" />,
+    title: "Up to 60% Cost Savings",
+    description: "Save on payroll, benefits, office space, and technology overhead. Free up resources to focus business development.",
   },
   {
-    title: "Dodo Financials (Our Model)",
-    features: [
-      "Skilled accounting professionals",
-      "No hiring or infrastructure cost",
-      "Flexible, scalable support",
-      "Cost-efficient without quality compromise"
-    ],
-    highlight: true,
-    priceModel: "Best Value"
-  }
+    icon: <ArrowUpDown size={22} className="text-white" />,
+    title: "Scalable Staffing",
+    description: "Leverage time-zone differences for around-the-clock productivity. Scale up and scale down according to the workload.",
+  },
+  {
+    icon: <Zap size={22} className="text-white" />,
+    title: "Fast Onboarding (48 Hours)",
+    description: "Our streamlined onboarding process transfers your work and integrates our systems within two business days.",
+  },
+  {
+    icon: <ClipboardList size={22} className="text-white" />,
+    title: "Layered Quality Reviews",
+    description: "Every deliverable undergoes multi-tier reviews (similar to a four-eyed review) to ensure accuracy and compliance.",
+  },
+  {
+    icon: <Settings size={22} className="text-white" />,
+    title: "Technology & Automation",
+    description: "Utilise cloud accounting software, automation tools, and real-time dashboards for transparency and efficiency.",
+  },
 ];
 
 const WhyDodo: React.FC = () => {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Why Choose Us List */}
-        <motion.div 
+
+        {/* Why Choose Us Cards */}
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -59,101 +49,114 @@ const WhyDodo: React.FC = () => {
           className="mb-20"
         >
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-bold text-slate-900 sm:text-4xl">
-              Why Choose Dodo Financials
+            <span className="inline-block border border-slate-300 text-slate-600 text-sm font-medium px-5 py-2 rounded-full mb-4">
+              How We Work
+            </span>
+            <h2 className="text-3xl font-serif font-bold text-[#0f0f3d] sm:text-4xl">
+              Why Choose Dodo Financials?
             </h2>
           </div>
-          <div className="bg-primary-50 rounded-2xl p-8 md:p-12">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {features.map((feature, idx) => (
-                <motion.div 
-                  key={idx} 
-                  initial={{ opacity: 0, x: -10 }}
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {whyCards.map((card, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="relative bg-gradient-to-br from-[#f0f0ff] to-white rounded-2xl border border-[#e0e0f5] p-8 group hover:shadow-lg transition-shadow duration-300"
+              >
+                {/* Top accent bar */}
+                <div className="absolute top-0 left-8 w-10 h-1 bg-[#1a1a6e] rounded-b-full" />
+
+                <div className="flex items-center gap-4 mb-4 mt-2">
+                  <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-[#1a1a6e] flex items-center justify-center">
+                    {card.icon}
+                  </div>
+                  <h3 className="text-lg font-bold text-[#0f0f3d]">{card.title}</h3>
+                </div>
+
+                <p className="text-slate-600 text-[15px] leading-relaxed">
+                  {card.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Security & Compliance */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative rounded-3xl overflow-hidden bg-[#0a1628] py-16 px-8 md:px-16"
+        >
+          {/* Subtle radial glow at bottom */}
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column */}
+            <div>
+              <span className="inline-block border border-blue-400/40 text-blue-300 text-sm font-medium px-4 py-1.5 rounded-full mb-6">
+                Security
+              </span>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6">
+                Security & Compliance
+              </h3>
+              <p className="text-slate-300 text-lg leading-relaxed mb-4">
+                We understand that client data is highly sensitive. Our systems and processes are built to ensure strong data protection and confidentiality.
+              </p>
+              <p className="text-slate-300 text-lg leading-relaxed">
+                Our practices are aligned with global standards including ISO 27001, SOC 2, and GDPR to ensure secure and compliant operations.
+              </p>
+            </div>
+
+            {/* Right Column - Feature Cards */}
+            <div className="space-y-6">
+              {[
+                {
+                  icon: <ShieldCheck size={24} className="text-blue-300" />,
+                  title: "Triple-Layer Security",
+                  description: "Infrastructure, application, and operational safeguards",
+                },
+                {
+                  icon: <Users size={24} className="text-blue-300" />,
+                  title: "Role-Based Access Controls",
+                  description: "Secure, role-specific data access with regular monitoring",
+                },
+                {
+                  icon: <Lock size={24} className="text-blue-300" />,
+                  title: "Encryption & Secure Access",
+                  description: "Data encryption and VPN-enabled secure connections",
+                },
+                {
+                  icon: <ClipboardCheck size={24} className="text-blue-300" />,
+                  title: "Continuous Audits & Backups",
+                  description: "Regular system audits and data backups",
+                },
+              ].map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: idx * 0.1 }}
-                  className="flex items-start gap-3"
+                  transition={{ duration: 0.5, delay: idx * 0.15 }}
+                  className="flex items-start gap-4"
                 >
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary-100 text-primary-600 flex items-center justify-center">
-                    <Check size={14} strokeWidth={3} />
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-400/20 flex items-center justify-center">
+                    {item.icon}
                   </div>
-                  <span className="text-lg text-slate-700 font-medium">{feature}</span>
+                  <div>
+                    <h4 className="text-white font-bold text-lg mb-1">{item.title}</h4>
+                    <p className="text-slate-400 text-sm">{item.description}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>
           </div>
         </motion.div>
-
-        {/* Smarter Accounting Support Comparison */}
-        <div className="relative">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
-          >
-            <h3 className="text-2xl font-serif font-bold text-slate-900 mb-4">
-              Smarter & Cost-Efficient Accounting Support
-            </h3>
-            <p className="max-w-3xl mx-auto text-lg text-slate-600">
-              Dodo Financials follows a smarter accounting support model that helps businesses reduce operational costs while maintaining professional standards and compliance.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-            {cards.map((card, index) => (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`relative rounded-2xl transition-all duration-300 ${
-                  card.highlight 
-                    ? 'bg-white shadow-2xl border-2 border-primary-500 scale-105 z-10' 
-                    : 'bg-slate-50 shadow-md border border-slate-200 hover:shadow-lg'
-                }`}
-              >
-                {card.highlight && (
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-bold shadow-sm uppercase tracking-wider">
-                    Best Value
-                  </div>
-                )}
-                
-                <div className="p-8">
-                  <h4 className={`text-xl font-serif font-bold mb-4 ${card.highlight ? 'text-primary-700' : 'text-slate-800'}`}>
-                    {card.title}
-                  </h4>
-                  <div className="mb-6 pb-6 border-b border-slate-200">
-                    <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
-                      card.highlight ? 'bg-primary-100 text-primary-800' : 'bg-slate-200 text-slate-600'
-                    }`}>
-                      {card.priceModel}
-                    </span>
-                  </div>
-                  
-                  <ul className="space-y-4">
-                    {card.features.map((feature, fIdx) => (
-                      <li key={fIdx} className="flex items-start gap-3">
-                        {card.highlight ? (
-                          <Check className="flex-shrink-0 w-5 h-5 text-green-500 mt-0.5" />
-                        ) : (
-                          <div className="flex-shrink-0 w-5 h-5 flex items-center justify-center mt-0.5">
-                             <div className="w-1.5 h-1.5 rounded-full bg-slate-400" />
-                          </div>
-                        )}
-                        <span className={`text-sm ${card.highlight ? 'text-slate-800 font-medium' : 'text-slate-600'}`}>
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

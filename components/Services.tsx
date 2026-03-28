@@ -99,7 +99,7 @@ const Services: React.FC = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="max-w-5xl mx-auto"
+          className="mx-auto"
         >
           <AnimatePresence mode="wait">
             <motion.div 
@@ -112,7 +112,7 @@ const Services: React.FC = () => {
             >
               
               {/* Left Side: Title & List */}
-              <div className="md:w-1/2 p-10 flex flex-col">
+              <div className="md:w-2/5 p-10 flex flex-col">
                  <div className="flex items-center gap-4 mb-6">
                    <span className="text-4xl">{servicesData[activeTab].flag}</span>
                    <h3 className="text-3xl font-bold text-slate-900">
@@ -135,7 +135,7 @@ const Services: React.FC = () => {
               </div>
 
               {/* Right Side: Image */}
-              <div className="md:w-1/2 h-[400px] md:h-auto">
+              <div className="md:w-3/5 h-[400px] md:h-auto min-h-[500px]">
                 <img 
                   src={servicesData[activeTab].image} 
                   alt={servicesData[activeTab].title}

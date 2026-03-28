@@ -16,11 +16,10 @@ const Footer: React.FC = () => {
               rel="noopener noreferrer"
               className="bg-[#1e293b] p-3 rounded-2xl mb-4 shadow-lg hover:bg-[#2d3a4f] transition-colors"
             >
-              <img 
-                src="https://i.ibb.co/spmxnJBZ/image.png" 
-                alt="Dodo Financials Logo" 
-                className="h-8 w-auto"
-                referrerPolicy="no-referrer"
+              <img
+                src="/Images/trustedBy/Blue Nad wight.png"
+                alt="Dodo Financials Logo"
+                className="h-16 w-auto"
               />
             </a>
           </div>
