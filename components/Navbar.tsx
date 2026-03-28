@@ -44,9 +44,9 @@ const Navbar: React.FC = () => {
               onClick={(e) => handleScrollToSection(e, '#home')}
             >
               <img
-                src="/Images/trustedBy/W Blue.png"
+                src={scrolled ? "/Images/trustedBy/Pnddd.png" : "/Images/trustedBy/WWWWWWWWWW.png"}
                 alt="Dodo Financials Logo"
-                className="h-12 w-auto transition-all duration-300 rounded-2xl"
+                className="h-12 w-auto transition-all duration-300"
               />
             </a>
           </div>

@@ -45,14 +45,17 @@ const WeWorkWith: React.FC = () => {
             Trusted support for firms, finance leaders, and growing businesses.
           </p>
         </motion.div>
+      </div>
 
-        {/* Tabs */}
+      {/* Tabs with full-width blue line */}
+      <div className="relative mb-10">
+        <div className="absolute top-0 left-0 right-0 bottom-0 bg-primary-600" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-4 mb-10"
+          className="relative z-10 flex flex-wrap justify-center gap-4 py-4"
         >
           {[
             { id: 'cpa', label: 'CPA Firms & Accountants' },
@@ -72,7 +75,9 @@ const WeWorkWith: React.FC = () => {
             </button>
           ))}
         </motion.div>
+      </div>
 
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Content Card */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}

@@ -7,25 +7,21 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-[#0a192f] text-white pt-16 pb-8 border-t border-white/10 font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
-          {/* Logo Section */}
-          <div className="lg:col-span-1 flex flex-col items-start">
-            <a 
-              href="https://vinkand.com/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="bg-[#1e293b] p-3 rounded-2xl mb-4 shadow-lg hover:bg-[#2d3a4f] transition-colors"
-            >
+        {/* Logo + Columns - all in one row */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-12 items-start">
+          {/* Logo Section - takes up ~1/3 */}
+          <div className="lg:col-span-4 flex items-start">
+            <a href="#home" className="inline-block">
               <img
-                src="/Images/trustedBy/Blue Nad wight.png"
+                src="/Images/trustedBy/WWWWWWWWWW.png"
                 alt="Dodo Financials Logo"
-                className="h-16 w-auto"
+                className="w-full max-w-[280px] h-auto"
               />
             </a>
           </div>
 
           {/* Services Column */}
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="text-lg font-serif font-bold mb-6 text-white">Services</h3>
             <ul className="space-y-4 text-slate-300">
               <li><a href="#services" className="hover:text-white transition-colors">Australia</a></li>
@@ -35,7 +31,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Company Column */}
-          <div>
+          <div className="lg:col-span-2">
             <h3 className="text-lg font-serif font-bold mb-6 text-white">Company</h3>
             <ul className="space-y-4 text-slate-300">
               <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
@@ -44,18 +40,8 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Resources Column */}
-          <div>
-            <h3 className="text-lg font-serif font-bold mb-6 text-white">Resources</h3>
-            <ul className="space-y-4 text-slate-300">
-              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">FAQs</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">Contact Us</a></li>
-            </ul>
-          </div>
-
           {/* Contact Column */}
-          <div>
+          <div className="lg:col-span-4">
             <h3 className="text-lg font-serif font-bold mb-6 text-white">Contact</h3>
             <ul className="space-y-4 text-slate-300">
               <li className="flex items-center gap-3">
@@ -70,7 +56,7 @@ const Footer: React.FC = () => {
                 <span>Level 15, 123 Pitt Street, Sydney NSW 2000, Australia</span>
               </li>
             </ul>
-            
+
             <div className="flex gap-3 mt-6">
               <a href="#" className="w-8 h-8 bg-[#0077b5] rounded flex items-center justify-center hover:opacity-80 transition-opacity">
                 <Linkedin size={18} stroke="white" strokeWidth={2} />
@@ -86,15 +72,18 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Powered By Section */}
-        <div className="flex justify-center items-center py-8 border-t border-white/5">
-          <a 
-            href="https://vinkand.com/" 
-            target="_blank" 
+        <div className="flex flex-col items-center gap-2 py-8 border-t border-white/5">
+          <a
+            href="https://vinkand.com/"
+            target="_blank"
             rel="noopener noreferrer"
             className="text-slate-400 text-lg hover:text-white transition-colors group"
           >
-            Made with ❤️ <span className="text-primary-500 font-bold group-hover:text-primary-400 transition-colors">Vinkand</span> <span className="text-white">Technologies</span>
+            Made with <span className="text-primary-500 font-bold group-hover:text-primary-400 transition-colors">Vinkand</span> <span className="text-white">Technologies</span>
           </a>
+          <span className="text-slate-500 text-sm">
+            Powered by <span className="text-slate-300 font-medium">MKb Associates</span>
+          </span>
         </div>
 
         {/* Bottom Bar */}
