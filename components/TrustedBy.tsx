@@ -20,7 +20,7 @@ const TrustedBy: React.FC = () => {
     <section className="py-16 bg-slate-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
         <h2 className="text-center text-2xl font-bold text-slate-700 tracking-wide">
-          Trusted By
+          Our Trusted Software Tools
         </h2>
       </div>
       <div className="relative">

@@ -24,9 +24,14 @@ const Contact: React.FC = () => {
             We're here to help your business thrive
           </p>
 
-          <button className="bg-[#3b82f6] text-white px-10 py-4 rounded-xl font-bold text-lg shadow-[0_10px_25px_-5px_rgba(59,130,246,0.4)] hover:bg-blue-600 transition-all hover:scale-105 mb-16">
+          <a
+            href="https://forms.cloud.microsoft/r/sT4tjjhBGj"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#3b82f6] text-white px-10 py-4 rounded-xl font-bold text-lg shadow-[0_10px_25px_-5px_rgba(59,130,246,0.4)] hover:bg-blue-600 transition-all hover:scale-105 mb-16"
+          >
             Send Enquiry
-          </button>
+          </a>
         </motion.div>
 
         <div className="space-y-6">

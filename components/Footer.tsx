@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
             Made with <span className="text-primary-500 font-bold group-hover:text-primary-400 transition-colors">Vinkand</span> <span className="text-white">Technologies</span>
           </a>
           <span className="text-slate-500 text-sm">
-            Powered by <span className="text-slate-300 font-medium">MKb Associates</span>
+            Powered by <span className="text-slate-300 font-medium">MKB Associates</span>
           </span>
         </div>
 

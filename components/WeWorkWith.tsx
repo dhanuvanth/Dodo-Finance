@@ -49,13 +49,13 @@ const WeWorkWith: React.FC = () => {
 
       {/* Tabs with full-width blue line */}
       <div className="relative mb-10">
-        <div className="absolute top-0 left-0 right-0 bottom-0 bg-primary-600" />
+        <div className="absolute top-0 left-0 right-0 bottom-0 bg-primary-700" />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative z-10 flex flex-wrap justify-center gap-4 py-4"
+          className="relative z-10 flex flex-wrap justify-center gap-4 py-5"
         >
           {[
             { id: 'cpa', label: 'CPA Firms & Accountants' },
@@ -67,8 +67,8 @@ const WeWorkWith: React.FC = () => {
               onClick={() => setActiveTab(tab.id as WorkWithKey)}
               className={`px-8 py-3 rounded-full font-bold text-sm md:text-base transition-all duration-200 flex items-center gap-2 ${
                 activeTab === tab.id
-                  ? 'bg-primary-600 text-white shadow-lg scale-105'
-                  : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
+                  ? 'bg-white text-primary-700 shadow-lg scale-105'
+                  : 'bg-transparent text-white hover:bg-white/10 border border-white/30'
               }`}
             >
               {tab.label}
