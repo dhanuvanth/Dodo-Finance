@@ -10,15 +10,15 @@ const teamMembers = [
     color: "bg-blue-100 text-blue-600"
   },
   {
-    name: "Subashini",
+    name: "Sia Shri",
     qualifications: "ACMA | Tax & Advisory Specialist",
     role: "UK & Australian Compliance",
     color: "bg-emerald-100 text-emerald-600"
   },
   {
-    name: "Muthu Vamsii",
-    qualifications: "Accounts Manager",
-    role: "Bookkeeping & Financial Operations",
+    name: "Kriya Charan",
+    qualifications: "Taxation & Financial Reporting Specialist",
+    role: "Taxation & Financial Reporting",
     color: "bg-pink-100 text-pink-600"
   },
   {
