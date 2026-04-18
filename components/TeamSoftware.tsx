@@ -28,6 +28,12 @@ const teamMembers = [
     color: "bg-orange-100 text-orange-600"
   },
   {
+    name: "Muthu Vamsii",
+    qualifications: "Accounts Manager",
+    role: "Bookkeeping & Financial Operations",
+    color: "bg-rose-100 text-rose-600"
+  },
+  {
     name: "Balaji",
     qualifications: "Payroll Manager",
     role: "Payroll & Compliance\nUSA Compliance Specialist",
